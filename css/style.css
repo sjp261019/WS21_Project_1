@@ -1,0 +1,294 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@keyframes background-change {
+    0%{
+        background-image: url("background.jpg");
+    }
+
+    49% {
+        background-image: url("background.jpg");
+    }
+
+    50% {
+        background-image: url("background2.jpg");
+    }
+
+    99%{
+        background-image: url("background2.jpg");
+    }
+
+   100%{
+        background-image: url("background.jpg");
+   }
+}
+
+.background {
+    position: fixed;
+
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+
+    animation-name: background-change;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+.window-all {
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    top: 10%;
+}
+
+.window {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    margin: auto;
+    top: 25%;
+    overflow: hidden;
+}
+
+.window1 {
+    z-index: 9;
+    height: 300px;
+    width: 300px;
+    background-color: #ff6811; 
+    position: fixed;
+    object-fit: cover;
+}
+
+.window1::before {
+    content: "";
+    background-image: url("grain.jpg");
+    background-size: 600px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 40%;
+    mix-blend-mode: overlay;
+}
+
+.window2 {
+    height: 300px;
+    width: 300px;
+    background-color: rgb(214, 134, 134); 
+    object-fit: cover;
+    background-image: url("tester.jpeg");
+    position: fixed;
+    background-size: cover;
+}
+
+.blinds-string {
+    position: relative;
+    top: 150px;
+    left: 49%;
+    width: 20px;
+}
+
+/*.window:hover {
+    height: 0px;
+    width: 300px;
+
+    transition-property: height;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}*/
+
+p {
+    color: white;
+    font-size: 30px;
+}
+
+.top-left {
+    float: left;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 50px;
+    text-align: center;
+    transform-origin: center;
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.top-left:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.top-right {
+    float: right;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 50px;
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.top-right:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.bottom-left {
+    float: left;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    margin: 50px;
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.bottom-left:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.bottom-right {
+    float: right;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 50px;
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.bottom-right:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.song {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 18px;
+    float: right;
+    position: fixed;
+    bottom: 5px;
+    right: 50px;
+    margin: 50px;
+
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.song:hover {
+    transform: scale(1.2);
+}
+
+.lyrics {
+    z-index: 9;
+    font-family: 'Reenie Beanie', cursive;
+    position: relative;
+}
+
+.lyric1 {
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 130px;
+}
+
+.lyric2 {
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 600px;
+}
+
+
+.home {
+    position: fixed;
+    top: 50px;
+    left: 49%;
+    opacity: 50%;
+
+    transition-property: transform opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.home:hover {
+    transform: scale(1.2);
+    opacity: 100%;
+}
+
+.home img{
+    height: 20px;
+    width: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .background {
+        height: 800px;
+        width: 100%;
+    }
+
+    p {
+        color: white;
+        font-size: 24px;
+    }
+
+    .window-all {
+        top: 5%;
+        transform: scale(0.8);
+    }
+
+    .song {
+        font-family: 'Reenie Beanie', cursive;
+        font-size: 16px;
+        float: right;
+        position: fixed;
+        bottom: 0px;
+        right: 40px;
+        margin: 50px;
+    }
+
+    .lyric1 {
+        z-index: 10;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 150px;
+    }
+    
+    .lyric2 {
+        z-index: 10;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 550px;
+    }
+}
