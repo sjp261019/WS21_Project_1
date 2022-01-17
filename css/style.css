@@ -69,6 +69,7 @@
     background-color: #ff6811; 
     position: fixed;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .window1::before {
@@ -92,12 +93,13 @@
     background-image: url("tester.jpeg");
     position: fixed;
     background-size: cover;
+    border-radius: 5px;
 }
 
 .blinds-string {
     position: relative;
     top: 150px;
-    left: 49%;
+    left: 49.5%;
     width: 20px;
 }
 
@@ -119,9 +121,9 @@ p {
 .top-left {
     float: left;
     position: fixed;
-    top: 0px;
+    top: -10px;
     left: 0px;
-    margin: 50px;
+    margin: 35px;
     text-align: center;
     transform-origin: center;
 
@@ -138,9 +140,9 @@ p {
 .top-right {
     float: right;
     position: fixed;
-    top: 0px;
+    top: -10px;
     right: 0px;
-    margin: 50px;
+    margin: 35px;
 
     transition-property: transform;
     transition-duration: 0.3s;
@@ -155,9 +157,9 @@ p {
 .bottom-left {
     float: left;
     position: fixed;
-    bottom: 0px;
+    bottom: -10px;
     left: 0px;
-    margin: 50px;
+    margin: 35px;
 
     transition-property: transform;
     transition-duration: 0.3s;
@@ -172,9 +174,9 @@ p {
 .bottom-right {
     float: right;
     position: fixed;
-    bottom: 0px;
+    bottom: -10px;
     right: 0px;
-    margin: 50px;
+    margin: 35px;
 
     transition-property: transform;
     transition-duration: 0.3s;
@@ -191,9 +193,9 @@ p {
     font-size: 18px;
     float: right;
     position: fixed;
-    bottom: 5px;
-    right: 50px;
-    margin: 50px;
+    display:inline;
+    right: 35px;
+    margin: 35px;
 
     transition-property: transform;
     transition-duration: 0.3s;
@@ -216,7 +218,7 @@ p {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 130px;
+    top: 140px;
 }
 
 .lyric2 {
@@ -224,13 +226,14 @@ p {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 600px;
+    top: 650px;
 }
 
 
 .home {
     position: fixed;
-    top: 50px;
+    display: inline;
+    top: 35px;
     left: 49%;
     opacity: 50%;
 
@@ -268,14 +271,13 @@ p {
 
     .song {
         font-family: 'Reenie Beanie', cursive;
-        font-size: 16px;
+        font-size: 18px;
         float: right;
         position: fixed;
-        bottom: 0px;
-        right: 40px;
-        margin: 50px;
+        display:inline;
+        right: 35px;
+        margin: 35px;
     }
-
     .lyric1 {
         z-index: 10;
         width: 100%;
