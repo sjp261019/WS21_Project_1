@@ -679,7 +679,7 @@ p {
     display: none;
     top: 62%;
     right: 24%;
-    z-index: 5;
+    z-index: 10;
 }
 
 .lyric6 span {
@@ -776,5 +776,29 @@ p {
 
     .next img {
         height: 50px;
+    }
+
+    #slider3{
+        max-width: 200px;
+        left: 10%;
+    }
+
+    .lyric4 p{
+        font-size: 50px;
+    }
+
+    .lyric5 p{
+        line-height: 8px;
+        font-size: 26px;
+    }
+
+    .lyric6 p{
+        font-size: 20px;
+    }
+
+    #slider4 {
+        top: 60%;
+        right: 12%;
+        z-index: 10;
     }
 }
