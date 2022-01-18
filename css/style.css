@@ -46,6 +46,44 @@ a {text-decoration: none;}
    }
 }
 
+@keyframes background-change2 {
+    0%{
+        background-image: url("tester.jpg");
+    }
+
+    20% {
+        background-image: url("tester.jpg");
+    }
+
+    25% {
+        background-image: url("2.jpg");
+    }
+
+    45% {
+        background-image: url("2.jpg");
+    }
+
+    50% {
+        background-image: url("3.jpg");
+    }
+
+    70% {
+        background-image: url("3.jpg");
+    }
+
+    75%{
+        background-image: url("4.jpg");
+    }
+
+    95%{
+        background-image: url("4.jpg");
+    }
+
+   100%{
+        background-image: url("tester.jpg");
+   }
+}
+
 @keyframes rotate {
     0%{
         transform: rotate(0deg);
@@ -92,6 +130,20 @@ a {text-decoration: none;}
 
    100%{
         transform: rotate(-1deg);
+   }
+}
+
+@keyframes rotate3 {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    50%{
+        transform: rotate(15deg);
+    }
+
+   100%{
+        transform: rotate(0deg);
    }
 }
 
@@ -160,11 +212,19 @@ a {text-decoration: none;}
     width: 300px;
     background-color: rgb(214, 134, 134); 
     object-fit: cover;
-    background-image: url("tester.jpeg");
+    background-image: url("tester.jpg");
     background-position: center;
     position: fixed;
     background-size: cover;
     border-radius: 5px;
+
+    animation-name: background-change2;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
 }
 
 .blinds-string {
@@ -360,9 +420,9 @@ p {
     position: fixed;
     display: inline;
     float: right;
-    top: 50%;
+    top: 45%;
     right: 10%;
-    opacity: 50%;
+    opacity: 70%;
 
     transition-property: transform opacity;
     transition-duration: 0.3s;
@@ -373,36 +433,22 @@ p {
 .next:hover {
     transform: scale(1.2);
     opacity: 100%;
-}
 
-.prev {
-    display: none;
-    z-index: 8;
-    position: fixed;
-    display: inline;
-    float: left;
-    top: 50%;
-    left: 10%;
-    opacity: 50%;
-
-    transition-property: transform opacity;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-}
-
-.prev:hover {
-    transform: scale(1.2);
-    opacity: 100%;
+    animation-name: rotate3;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
 }
 
 .next img {
-    height: 20px;
+    height: 100px;
 }
 
-.prev img {
+#next2 {
     display: none;
-    height: 20px;
 }
 
 #slider {
@@ -502,6 +548,7 @@ p {
     }
 
     .window-all {
+        z-index: 9;
         top: 5%;
         transform: scale(0.8);
     }
@@ -534,12 +581,21 @@ p {
     .typing {
         display: none;
         width: 400px;
-        padding-bottom: 400px;
+        z-index: 3;
+        padding-bottom: 360px;
     }
 
     .lyric3 {
         display: none;
         width: 350px;
 
+    }
+
+    .next {
+        z-index: 10;
+    }
+
+    .next img {
+        height: 50px;
     }
 }

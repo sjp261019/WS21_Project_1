@@ -15,10 +15,19 @@ $(document).ready(function(){
         $(".blinds-string").animate({"top":"150px"}, 800, "easeOutBounce");
         });
 
-    $(".next").on("click", function(){
+    $("#next1").on("click", function(){
         $(".lyrics").hide("slow");
         $(".typing").show("slow");
         $(".lyric3").delay(4500).show("slow");
         $(this).animate({"opacity":"0"}, 800, "swing");
+        $(this).delay(500).hide("slow");
+        $("#next2").delay(8800).show("slow");
+        });
+    
+    $("#next2").on("click", function(){
+        $(".typing").hide("slow");
+        $(".lyric3").delay(700).hide("slow");
+        $(this).animate({"opacity":"0"}, 800, "swing");
+        $(this).delay(500).hide("slow");
         });
 });
