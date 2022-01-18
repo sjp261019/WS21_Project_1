@@ -147,6 +147,92 @@ a {text-decoration: none;}
    }
 }
 
+@keyframes rotate4 {
+    0%{
+        transform: rotate(-10deg);
+    }
+
+    50%{
+        transform: rotate(10deg);
+    }
+
+   100%{
+        transform: rotate(-10deg);
+   }
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-200px);
+        opacity: 100%;
+    }
+
+    75%{
+        opacity: 0%;
+    }
+
+   100%{
+        transform: translateY(300px);
+   }
+}
+
+@keyframes move2 {
+    0%{
+        line-height: 20px;
+    }
+
+    50%{
+        line-height: 50px;
+    }
+
+   100%{
+        line-height: 20px;
+   }
+}
+
+@keyframes move3 {
+    0%{
+        line-height: 45px;
+    }
+
+    49% {
+        line-height: 45px;
+    }
+
+    50% {
+        line-height: 46px;
+    }
+
+    99%{
+        line-height: 46px;
+    }
+
+   100%{
+        line-height: 45px;
+   }
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+    animation: fadeIn ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+
+   100%{
+        opacity: 1;
+   }
+}
+
 .background {
     position: fixed;
 
@@ -416,7 +502,7 @@ p {
 }
 
 .next {
-    z-index: 8;
+    z-index: 10;
     position: fixed;
     display: inline;
     float: right;
@@ -435,7 +521,7 @@ p {
     opacity: 100%;
 
     animation-name: rotate3;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
     animation-iteration-count: infinite;
@@ -451,24 +537,30 @@ p {
     display: none;
 }
 
-#slider {
-    z-index: 3;
-    position: absolute;
-    margin: auto;
-    top: 150px;
-    width: 100%;
+#next3 {
+    display: none;
 }
 
-#slider div {
+.slider {
+    position: absolute;
     margin: auto;
+    width: 100%;
+    color: white;
     font-family: 'Reenie Beanie', cursive;
     font-size: 24px;
-    color: white;
-    text-align: center;
-    top: 30%;
+}
+
+#slider1 {
+    z-index: 3;
+    top: 150px;
+}
+
+#slider1 div {
+    margin: auto;
 }
 
 .typing {
+    top: 30%;
     display: none;
     width: 500px;
     padding-bottom: 450px;
@@ -494,6 +586,7 @@ p {
 }
 
 .lyric3 {
+    top: 30%;
     display: none;
     width: 420px;
 
@@ -506,7 +599,7 @@ p {
     animation-play-state: running;
 }
 
-.lyric3 p{
+.lyric3 p {
     overflow: hidden;
     border-right: .08em solid #ff6811;
     white-space: nowrap;
@@ -519,6 +612,92 @@ p {
 
 .party {
     animation-name: colorchange;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+#slider2 {
+    z-index: 9;
+    display: none;
+    text-align: center;
+    top: 300px;
+
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.lyric4 {
+    width: 100%;
+    top: 30%;
+    transform: rotate(-15deg);
+
+
+    animation-name: rotate4;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+#slider3 {
+    position: absolute;
+    z-index: 9;
+    max-width: 500px;
+    top: 150px;
+    left: 25%;
+    display: none;
+    
+}
+
+.lyric4 p{
+    font-size: 100px;
+}
+
+.lyric5 p{
+    line-height: 10px;
+    font-size: 45px;
+
+    animation-name: move2;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+#slider4 {
+    display: none;
+    top: 62%;
+    right: 24%;
+    z-index: 5;
+}
+
+.lyric6 span {
+    display: inline-block;
+    transform: scale(2) skewX(0deg);
+}
+
+.lyric6 span:hover {
+    display: inline-block;
+    transform: scale(4) skewX(-15deg);
+}
+
+.lyric6 p{
+    text-align: right;
+    font-size: 30px;
+    line-height: 35px;
+
+    animation-name: move3;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-delay: 0s;
