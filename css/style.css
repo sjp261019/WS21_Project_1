@@ -3,6 +3,26 @@
     margin: 0px;
     box-sizing: border-box;
 }
+li {list-style: none;}
+a {text-decoration: none;}
+
+@keyframes colorchange {
+    0%{
+        color:rgb(70, 111, 223);
+    }
+    25%{
+        color:rgb(223, 70, 70);
+    }
+    50%{
+        color:rgb(70, 223, 159);
+    }
+    75%{
+        color:rgb(141, 70, 223);
+    }
+    100%{
+        color:rgb(70, 111, 223);
+    }
+}
 
 @keyframes background-change {
     0%{
@@ -135,6 +155,7 @@
 }
 
 .window2 {
+    z-index: 8;
     height: 300px;
     width: 300px;
     background-color: rgb(214, 134, 134); 
@@ -147,6 +168,7 @@
 }
 
 .blinds-string {
+    z-index: 8;
     position: relative;
     top: 150px;
     left: 49.5%;
@@ -251,13 +273,14 @@ p {
 }*/
 
 .song {
+    z-index: 6;
     font-family: 'Reenie Beanie', cursive;
     font-size: 18px;
     float: right;
     position: fixed;
     display:inline;
-    right: 50px;
-    margin: 35px;
+    margin-top: 35px;
+    right: 75px;
 
     transition-property: transform;
     transition-duration: 0.3s;
@@ -280,7 +303,7 @@ p {
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 180px;
+    top: 160px;
 
     animation-name: rotate2;
     animation-duration: 2s;
@@ -301,7 +324,7 @@ p {
     animation-name: rotate2;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
-    animation-delay: 0s;
+    animation-delay: 0.5s;
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-play-state: running;
@@ -309,6 +332,7 @@ p {
 
 
 .home {
+    z-index: 5;
     position: fixed;
     display: inline;
     top: 35px;
@@ -326,9 +350,145 @@ p {
     opacity: 100%;
 }
 
-.home img{
+.home img {
     height: 20px;
     width: 20px;
+}
+
+.next {
+    z-index: 8;
+    position: fixed;
+    display: inline;
+    float: right;
+    top: 50%;
+    right: 10%;
+    opacity: 50%;
+
+    transition-property: transform opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.next:hover {
+    transform: scale(1.2);
+    opacity: 100%;
+}
+
+.prev {
+    display: none;
+    z-index: 8;
+    position: fixed;
+    display: inline;
+    float: left;
+    top: 50%;
+    left: 10%;
+    opacity: 50%;
+
+    transition-property: transform opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.prev:hover {
+    transform: scale(1.2);
+    opacity: 100%;
+}
+
+.next img {
+    height: 20px;
+}
+
+.prev img {
+    display: none;
+    height: 20px;
+}
+
+#slider {
+    z-index: 3;
+    position: absolute;
+    margin: auto;
+    top: 150px;
+    width: 100%;
+}
+
+#slider div {
+    margin: auto;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    top: 30%;
+}
+
+.typing {
+    display: none;
+    width: 500px;
+    padding-bottom: 450px;
+
+    animation-name: rotate2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+.typing p{
+    overflow: hidden;
+    border-right: .08em solid #ff6811;
+    white-space: nowrap;
+    margin: 0 auto;
+
+    animation: 
+        typing 4s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+.lyric3 {
+    display: none;
+    width: 420px;
+
+    animation-name: rotate2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+.lyric3 p{
+    overflow: hidden;
+    border-right: .08em solid #ff6811;
+    white-space: nowrap;
+    margin: 0 auto;
+
+    animation: 
+        typing 4s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+.party {
+    animation-name: colorchange;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+}
+
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+
+@keyframes blink-caret {
+    from, to {border-color: transparent}
+    50% {border-color: #ff6811;}
 }
 
 @media screen and (max-width: 768px) {
@@ -338,7 +498,6 @@ p {
     }
 
     p {
-        color: white;
         font-size: 24px;
     }
 
@@ -353,8 +512,8 @@ p {
         float: right;
         position: fixed;
         display:inline;
-        right: 35px;
-        margin: 35px;
+        margin-top: 30px;
+        right: 75px;
     }
     .lyric1 {
         z-index: 10;
@@ -370,5 +529,17 @@ p {
         text-align: center;
         position: absolute;
         top: 550px;
+    }
+
+    .typing {
+        display: none;
+        width: 400px;
+        padding-bottom: 400px;
+    }
+
+    .lyric3 {
+        display: none;
+        width: 350px;
+
     }
 }

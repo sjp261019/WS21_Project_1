@@ -14,4 +14,11 @@ $(document).ready(function(){
     $(".window2").on("mouseleave", function(){
         $(".blinds-string").animate({"top":"150px"}, 800, "easeOutBounce");
         });
+
+    $(".next").on("click", function(){
+        $(".lyrics").hide("slow");
+        $(".typing").show("slow");
+        $(".lyric3").delay(4500).show("slow");
+        $(this).animate({"opacity":"0"}, 800, "swing");
+        });
 });
